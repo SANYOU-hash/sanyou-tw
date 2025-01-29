@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANYOU 个人介绍</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入外部 CSS -->
+    <link rel="icon" href="https://i0.hdslb.com/bfs/new_dyn/b6f5b71f422c78aacb58a359583800cf1768993108.jpg" type="image/jpeg">
+</head>
+<body>
+
+    <header>
+        <h1>欢迎来到 SANYOU 介绍专用网站</h1>
+        <p class="subtitle">Welcome to the SANYOU Introduction Website</p>
+        <img src="https://i0.hdslb.com/bfs/new_dyn/b6f5b71f422c78aacb58a359583800cf1768993108.jpg" alt="SANYOU Logo" class="logo">
+    </header>
+
+    <nav>
+        <a href="#about">关于 SANYOU</a>
+        <a href="#projects">我的直播项目</a>
+        <a href="#fan-group">我的粉丝群</a>
+        <a href="#contact">联系我</a>
+        <a href="#live-stream">观看直播</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>关于 SANYOU</h2>
+            <p>SANYOU 是一位菜鸡主播，很菜非常菜。</p>
+        </section>
+
+        <section id="projects">
+            <h2>我的直播项目</h2>
+            <ul>
+                <li><strong>模拟飞行: 关于微软模拟飞行的直播</strong></li>
+                <li><strong>射击游戏：PUBG, CS, VALORANT</strong></li>
+                <li><strong>主机游戏：偶尔打别的游戏，打累了会玩</strong></li>
+                <li><strong>我的世界：主机游戏同理</strong></li>
+            </ul>
+        </section>
+
+        <section id="fan-group">
+            <h2>我的粉丝群</h2>
+            <p>加入我们的粉丝群获取更多动态：</p>
+            <address>
+                Discord: <a href="https://discord.gg/6MkZFQJ25Q" target="_blank">加入 Discord</a><br>
+                Telegram: <a href="https://t.me/+ZswH9SrcotEwZjIx" target="_blank">加入 Telegram</a>
+            </address>
+        </section>
+
+        <section id="contact">
+            <h2>联系我</h2>
+            <p>如果您有任何问题或需要进一步的信息，请随时联系我：</p>
+            <address>
+                Email: <a href="mailto:haoyangwang2010@163.com">haoyangwang2010@163.com</a><br>
+                QQ: 2026381060
+            </address>
+        </section>
+
+        <!-- 观看直播部分 -->
+        <section id="live-stream">
+            <h2>观看直播</h2>
+            <div class="live-stream-container">
+                <div id="twitch-embed"></div>
+                <!-- 替换 Twitch 聊天框 -->
+                <iframe
+                    id="chat_embed"
+                    src="https://www.twitch.tv/embed/sysanyou/chat?parent=www.example.com"
+                    height="500"
+                    width="350">
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SANYOU. All rights reserved.</p>
+    </footer>
+
+    <!-- 加载 Twitch 嵌入式播放器的脚本 -->
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script>
+        window.onload = function() {
+            new Twitch.Player("twitch-embed", {
+                channel: "sysanyou"
+            });
+        };
+    </script>
+
+</body>
+</html>
